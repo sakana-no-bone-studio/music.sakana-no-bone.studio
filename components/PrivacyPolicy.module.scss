@@ -7,4 +7,29 @@
     color: rgb(0, 155, 175);
     text-decoration: underline;
   }
+
+  button {
+    display: block;
+    margin: 48px;
+    position: relative;
+    width: calc(100% - 96px);
+    height: 32px;
+    background: rgba(245, 245, 245, 0.9);
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      bottom: -2px;
+      left: -2px;
+      right: -2px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, rgb(230, 39, 187), rgb(255, 159, 0));
+      z-index: -1;
+      filter: drop-shadow(0 2px 4px rgba(230, 39, 187, 50%));
+    }
+  }
 }

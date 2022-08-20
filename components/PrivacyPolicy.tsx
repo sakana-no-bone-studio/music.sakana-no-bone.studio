@@ -1,5 +1,6 @@
-import Link from 'next/link'
 import styles from './PrivacyPolicy.module.scss'
+import { resetCookieConsentValue } from 'react-cookie-consent'
+import removeMatchedCookies from '../utils/removeMatchedCookies'
 
 const PrivacyPolicy = () => {
   return (
@@ -30,6 +31,15 @@ const PrivacyPolicy = () => {
       <p>
         サイト訪問時のCookie利用許可バナーをリセットしもう一度表示する場合は、下のボタンを押してください。
       </p>
+      <button
+        onClick={() => {
+          removeMatchedCookies(/^_ga/, 'localhost:3000')
+          resetCookieConsentValue()
+          window.location.reload()
+        }}
+      >
+        Cookieの許可バナーをもう一度表示する
+      </button>
     </section>
   )
 }

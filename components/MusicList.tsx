@@ -45,7 +45,7 @@ const MusicList = (props: Props) => {
               <td className={styles.tdTitle}>{music.title}</td>
               <td className={styles.tdDate}>{music.date}</td>
               <td className={styles.tdDownload}>
-                <a href={music.ogg} download>
+                <a href={music.ogg} download data-music-title={music.title}>
                   <FontAwesomeIcon icon={faDownload} />
                 </a>
               </td>
