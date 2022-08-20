@@ -1,0 +1,71 @@
+.section {
+  font-size: 0.8rem;
+  color: rgb(12, 12, 12);
+  margin-bottom: 48px;
+
+  a {
+    color: rgb(0, 155, 175);
+    text-decoration: underline;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 24px;
+  overflow: hidden;
+
+  @media (max-width: 960px) {
+    width: calc(100% + 96px);
+    margin-left: -48px;
+  }
+}
+
+.thead {
+  background: rgba(255, 255, 255, 90%);
+}
+
+.tr {
+  height: 64px;
+  background: rgba(255, 255, 255, 90%);
+}
+.tr:nth-child(odd) {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 177, 225, 0.9),
+    rgba(255, 234, 200, 0.9)
+  );
+}
+
+.tdPlay {
+  text-align: center;
+}
+.tdPlay > button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.playing {
+  background: linear-gradient(135deg, rgb(230, 39, 187), rgb(255, 159, 0));
+  color: white;
+}
+
+.tdTitle {
+  font-weight: bold;
+}
+.tdDate {
+  text-align: center;
+}
+.tdDownload {
+  text-align: center;
+  font-size: 18px;
+}
+.tdDownload > a {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+}

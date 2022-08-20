@@ -1,0 +1,264 @@
+.audioPlayer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 150px;
+  background: rgb(255, 255, 255);
+  border-radius: 24px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 26px;
+    background: linear-gradient(135deg, rgb(230, 39, 187), rgb(255, 159, 0));
+    z-index: -1;
+    filter: drop-shadow(0 2px 4px rgba(230, 39, 187, 50%));
+  }
+}
+
+.musicTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  isolation: isolate;
+  height: 48px;
+}
+.musicTitleText {
+  color: rgb(85, 85, 85);
+  font-weight: bold;
+  margin-left: 24px;
+}
+
+.volumeButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  margin-right: 24px;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 50%;
+    background: linear-gradient(
+      135deg,
+      rgba(230, 39, 187, 50%),
+      rgba(255, 159, 0, 50%)
+    );
+    z-index: -1;
+  }
+  svg {
+    width: 60%;
+    height: 60%;
+  }
+}
+.volumeButtonShow {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, rgb(230, 39, 187), rgb(255, 159, 0));
+  border-radius: 50%;
+  margin-right: 24px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 50%;
+    background: linear-gradient(
+      135deg,
+      rgba(230, 39, 187, 50%),
+      rgba(255, 159, 0, 50%)
+    );
+    z-index: -1;
+  }
+  svg {
+    color: white;
+    width: 60%;
+    height: 60%;
+  }
+}
+
+.volumeSliderHide {
+  visibility: hidden;
+  padding: 0 12px;
+  height: 24px;
+  width: 128px;
+  position: absolute;
+  right: 12px;
+  top: 48px;
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  filter: drop-shadow(0 0 4px rgb(230, 39, 187));
+}
+.volumeSliderShow {
+  padding: 0 12px;
+  height: 24px;
+  width: 128px;
+  position: absolute;
+  right: 12px;
+  top: 48px;
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  filter: drop-shadow(0 0 4px rgb(230, 39, 187));
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    right: 18px;
+    border: 6px solid transparent;
+    border-bottom: 6px solid rgb(255, 255, 255);
+  }
+}
+.volumeSliderTrack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 100%;
+}
+.volumeSliderTrackInner {
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+}
+.volumeSliderThumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgb(230, 39, 187), rgb(255, 159, 0));
+}
+
+.buttonList {
+  display: flex;
+  height: 64px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  isolation: isolate;
+}
+
+.playButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgb(230, 39, 187), rgb(255, 159, 0));
+    z-index: -1;
+  }
+}
+
+.sideButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgb(230, 39, 187), rgb(255, 159, 0));
+    z-index: -1;
+  }
+}
+
+.sideButtonEnabled {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, rgb(230, 39, 187), rgb(255, 159, 0));
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgb(230, 39, 187), rgb(255, 159, 0));
+    z-index: -1;
+  }
+}
+
+.playButton svg {
+  width: 60%;
+  height: 60%;
+}
+
+.timeSlider {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  width: 100%;
+  padding: 12px;
+}
+.timeSliderTrack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 100%;
+}
+.timeSliderTrackInner {
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+}
+.timeSliderThumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgb(230, 39, 187), rgb(255, 159, 0));
+}

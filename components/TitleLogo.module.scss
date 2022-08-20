@@ -1,0 +1,9 @@
+.titleLogo {
+  display: block;
+  margin-bottom: 48px;
+
+  @media (max-width: 960px) {
+    margin-bottom: 24px;
+    padding: 24px;
+  }
+}

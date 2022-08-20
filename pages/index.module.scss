@@ -1,0 +1,83 @@
+.main {
+  display: flex;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 100%;
+  background-size: 100vh;
+  background-attachment: fixed;
+  background-position: 45%;
+  background-image: url(/blobanimation.svg);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+}
+
+.left {
+  position: sticky;
+  width: 50%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px;
+
+  > div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 960px) {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    z-index: 10;
+    top: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    padding: unset;
+  }
+}
+
+@media (max-width: 960px) {
+  .audioPlayerTop {
+    transition: transform 0.8s ease-in-out;
+    transform: translate(0, calc(50vh - 220px));
+  }
+  .audioPlayer {
+    transition: transform 0.8s ease-in-out;
+    transform: translate(0, -130px);
+  }
+}
+
+.right {
+  width: 50%;
+  margin-left: auto;
+  margin-right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 48px;
+  padding-bottom: 0;
+
+  @media (max-width: 960px) {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 160px);
+    padding-bottom: 0;
+    mask-image: linear-gradient(to bottom, transparent 20px, black 80px);
+    > div {
+      padding-top: calc(100vh - 200px);
+    }
+  }
+}
