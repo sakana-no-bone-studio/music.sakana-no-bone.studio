@@ -24,7 +24,7 @@ ffmpeg.setFfmpegPath(pathToFfmpeg)
 
     const options = [
       '-map_metadata',
-      '-1',
+      '0',
       '-metadata',
       `title=${data.title}`,
       '-metadata',

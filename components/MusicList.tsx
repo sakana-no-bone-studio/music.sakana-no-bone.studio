@@ -51,6 +51,7 @@ const MusicList = (props: Props) => {
               </td>
             </tr>
           ))}
+          <tr className={styles.tableFooter}></tr>
         </tbody>
       </table>
     </section>

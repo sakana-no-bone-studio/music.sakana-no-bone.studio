@@ -43,7 +43,7 @@ const TermsOfUse = () => {
         まで連絡をください。
       </p>
       <p>
-        <time dateTime='2022-08-15'>2022年8月15日</time>最終更新
+        <time dateTime='2022-08-21'>2022年8月21日</time>最終更新
       </p>
     </section>
   )

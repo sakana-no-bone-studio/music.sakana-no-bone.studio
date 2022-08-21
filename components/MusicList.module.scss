@@ -2,6 +2,7 @@
   font-size: 0.8rem;
   color: rgb(12, 12, 12);
   margin-bottom: 48px;
+  isolation: isolate;
 
   a {
     color: rgb(0, 155, 175);
@@ -10,24 +11,37 @@
 }
 
 .table {
+  position: relative;
   width: 100%;
   border-collapse: collapse;
   border-radius: 24px;
-  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
 
   @media (max-width: 960px) {
     width: calc(100% + 96px);
     margin-left: -48px;
   }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 26px;
+    background: linear-gradient(135deg, rgb(230, 39, 187), rgb(255, 159, 0));
+    z-index: -1;
+  }
 }
 
 .thead {
-  background: rgba(255, 255, 255, 90%);
+  height: 24px;
 }
 
 .tr {
   height: 64px;
-  background: rgba(255, 255, 255, 90%);
+  background: transparent;
 }
 .tr:nth-child(odd) {
   background: linear-gradient(
@@ -35,6 +49,11 @@
     rgba(255, 177, 225, 0.9),
     rgba(255, 234, 200, 0.9)
   );
+}
+
+.tableFooter {
+  height: 24px;
+  background: transparent;
 }
 
 .tdPlay {
